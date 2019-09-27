@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="sFP-Yv-wKt">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="jiw-rF-9F3">
+            <objects>
+                <windowController id="sFP-Yv-wKt" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="eGY-6K-Roa">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="sFP-Yv-wKt" id="GLr-0c-gst"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="cTE-sK-Nja" kind="relationship" relationship="window.shadowedContentViewController" id="PIT-eu-c4X"/>
+                    </connections>
+                </windowController>
+                <customObject id="Cho-kz-fSM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="151"/>
+        </scene>
+        <!--新窗口-->
+        <scene sceneID="FPP-7s-qr9">
+            <objects>
+                <viewController title="新窗口" id="cTE-sK-Nja" customClass="newWindowStoryboard" sceneMemberID="viewController">
+                    <view key="view" id="R2s-zs-5dM">
+                        <rect key="frame" x="0.0" y="0.0" width="583" height="386"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bB5-Z1-eY1">
+                                <rect key="frame" x="18" y="342" width="146" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="2hS-LZ-jh2" id="Ckq-DB-thH">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="8Nl-Yj-vRe">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="2hS-LZ-jh2"/>
+                                            <menuItem title="Item 2" id="Wne-3k-7im"/>
+                                            <menuItem title="Item 3" id="TqW-59-15Q"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-cP-zhs">
+                                <rect key="frame" x="242" y="221" width="110" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="点我退出界面" alternateTitle="点击完成" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jns-Id-1Xv">
+                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="closeWindow:" target="cTE-sK-Nja" id="G3S-qH-qnf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="TZr-PA-P8K" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="635" y="151"/>
+        </scene>
+    </scenes>
+</document>
